@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXC Global Guide: The Best Exchange for Altcoin Trading and Low Fees</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Load Phosphor Icons for simple, modern iconography -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <style>
+        /* Variables */
+        :root {
+            --mexc-yellow: #f8b400; /* Primary MEXC accent color */
+            --bg-light: #ffffff;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --card-light: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--card-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--bg-light);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            min-height: 100vh;
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-top: 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: var(--mexc-yellow);
+        }
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 50px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 20px;
+            background: linear-gradient(180deg, var(--card-light) 0%, #ffffff 100%);
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: block;
+            width: 90%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background-color: var(--mexc-yellow);
+            color: var(--text-dark);
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(248, 180, 0, 0.4);
+            transition: all 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #ffc933;
+            box-shadow: 0 6px 20px rgba(248, 180, 0, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        /* Referral Code Box */
+        .referral-box {
+            background-color: var(--card-light);
+            border: 2px dashed var(--mexc-yellow);
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 450px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .code-display {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            background-color: #fff;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            user-select: all; 
+        }
+        .copy-btn {
+            padding: 8px 15px;
+            background-color: var(--mexc-yellow);
+            color: var(--text-dark);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #ffc933;
+        }
+        .copy-message {
+            color: var(--mexc-yellow);
+            font-weight: 600;
+            height: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        .feature-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(248, 180, 0, 0.1);
+        }
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--mexc-yellow);
+            margin-bottom: 10px;
+            display: block;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 1.15rem;
+        }
+        
+        /* Step-by-Step List */
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .step-list li {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--card-light);
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+            position: relative;
+            text-align: left;
+        }
+        .step-list li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: -15px;
+            top: 20px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            background-color: var(--mexc-yellow);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .step-list li h3 {
+            margin-left: 35px;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        .step-list li p {
+            margin-left: 35px;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding: 30px 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .cta-button { font-size: 1.1rem; padding: 12px 20px; }
+            .step-list li::before { 
+                left: 10px;
+                top: -15px;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+            .step-list li h3, .step-list li p {
+                margin-left: 0;
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="hero">
+            <p class="subtitle">Your Gateway to Next-Gen Altcoins</p>
+            <!-- SEO Headline -->
+            <h1>The Complete Guide to Trading on MEXC Global</h1>
+            
+            <p style="max-width: 750px; margin: 20px auto 30px; font-size: 1.15rem; text-align: center;">
+                MEXC is the exchange of choice for serious altcoin traders, offering an unparalleled selection, industry-leading low fees, and a powerful trading platform.
+            </p>
+
+            <!-- PRIMARY CALL TO ACTION -->
+            <a href="https://www.mexc.com/auth/signup?inviteCode=2pLgC" class="cta-button">
+                🚀 Sign Up for MEXC & Claim Your Fee Bonus!
+            </a>
+
+            <!-- REFERRAL CODE BOX -->
+            <div class="referral-box">
+                <p style="margin: 0; color: var(--text-dark); text-align: center;">
+                    <b>Bonus:</b> Use the invite code below during registration for guaranteed savings on trading fees!
+                </p>
+                <span class="code-display" id="referralCode">2pLgC</span>
+                <button class="copy-btn" onclick="copyCode('2pLgC')">Copy Invite Code</button>
+                <div id="copyMessage"></div>
+            </div>
+        </header>
+
+        <!-- --- -->
+        <h2>Why Choose MEXC for Your Crypto Portfolio?</h2>
+        <!-- --- -->
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="ph-sparkle-fill"></i>
+                <h3>Altcoin Paradise</h3>
+                <p>MEXC is known for listing new tokens and hidden gems early. If you're looking beyond the top 10 coins, MEXC is where most high-potential altcoins launch.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph-wallet-fill"></i>
+                <h3>The Lowest Fees</h3>
+                <p>Enjoy highly competitive spot trading fees and zero-fee promotional events. This is critical for active traders where margins matter most.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph-chart-line-up-fill"></i>
+                <h3>Powerful Trading Tools</h3>
+                <p>The platform provides a comprehensive suite of professional trading tools, including futures, leverage, margin trading, and staking options.</p>
+            </div>
+        </div>
+        
+        <!-- --- -->
+        <h2>Step-by-Step: Getting Started on MEXC</h2>
+        <!-- --- -->
+        
+        <ul class="step-list">
+            <li>
+                <h3>1. Account Registration (Use Code: 2pLgC)</h3>
+                <p>
+                    Click the <b>Sign Up</b> button above. You can register instantly using your email or phone number. Ensure the invite code <b>2pLgC</b> is automatically applied to lock in your trading fee rebate. Set a strong password immediately.
+                </p>
+            </li>
+            <li>
+                <h3>2. Security & KYC Verification</h3>
+                <p>
+                    Prioritize security by enabling <b>Two-Factor Authentication (2FA)</b> via Google Authenticator. Next, complete the Identity Verification (KYC) process by submitting your national ID. This unlocks higher withdrawal limits and enables full fiat trading access.
+                </p>
+            </li>
+            <li>
+                <h3>3. Funding Your Account</h3>
+                <p>
+                    Navigate to your Wallet and select <b>Deposit</b>. MEXC makes it easy:
+                    <ul>
+                        <li><b>Fiat Deposit:</b> Use a credit/debit card or a bank transfer (depending on your region) to buy major crypto (like USDT or BTC) instantly.</li>
+                        <li><b>Crypto Deposit:</b> Transfer existing coins from another wallet or exchange (USDT is the most common and recommended coin for this).</li>
+                    </ul>
+                </p>
+            </li>
+            <li>
+                <h3>4. Finding and Buying Your First Altcoin</h3>
+                <p>
+                    Go to the <b>Spot Trading</b> section. In the search bar, look up the coin you want to buy (e.g., "MX/USDT"). Use a <b>Market Order</b> for instant purchase or a <b>Limit Order</b> to set a specific price. Execute your trade and welcome to the world of altcoin trading!
+                </p>
+            </li>
+        </ul>
+        
+        <!-- FINAL CALL TO ACTION -->
+        <h2 style="text-align: center; margin-top: 60px;">Ready to Explore 1700+ Cryptocurrencies?</h2>
+        <a href="https://www.mexc.com/auth/signup?inviteCode=2pLgC" class="cta-button">
+            Start Trading on MEXC Now
+        </a>
+
+        <div class="footer">
+            <p>This guide is an independent affiliate resource. All trademarks belong to MEXC Global.</p>
+            <p>Trading is risky. Only invest what you can afford to lose. Invite Code: 2pLgC</p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Copy-to-Clipboard Functionality -->
+    <script>
+        function copyCode(code) {
+            const messageElement = document.getElementById('copyMessage');
+            
+            // Use document.execCommand('copy') for better compatibility
+            const tempInput = document.createElement('input');
+            tempInput.value = code;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                document.execCommand('copy');
+                messageElement.textContent = "Invite Code " + code + " Copied!";
+                messageElement.style.opacity = 1;
+                setTimeout(() => {
+                    messageElement.style.opacity = 0;
+                }, 2000);
+            } catch (err) {
+                console.error('Could not copy text: ', err);
+                messageElement.textContent = "Copy failed. Please copy manually.";
+                messageElement.style.opacity = 1;
+            } finally {
+                document.body.removeChild(tempInput);
+            }
+        }
+    </script>
+
+</body>
+</html>
